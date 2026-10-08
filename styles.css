@@ -1,0 +1,587 @@
+* {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: clamp(12px, 1.5vw, 20px);
+}
+
+/*navbar*/
+.top-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(59, 59, 59, .5);
+    height: 128px;
+    position: sticky;
+    top: 0%;
+    z-index: 1000; /* Priority over everything else*/
+}
+
+/* Main navigation tools */
+.top-nav-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.top-nav-list li a {
+    text-decoration: none;
+    padding: 14px;
+    font-size: 1.5rem;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+}
+
+.top-nav-list li a:hover {
+    background-color: #fe7ac1;
+}
+
+/* Login button */
+.top-nav-login {
+    list-style-type: none;
+    display: flex;
+}
+
+.top-nav-login li a {
+    text-decoration: none;
+    padding: 14px;
+    font-size: 1.5rem;
+    color: #7b024d;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px #fe7ac1;
+}
+
+.top-nav-login li a:hover {
+    background-color: #7b024d;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;
+}
+
+/*hero slider */
+.slider-container { 
+    position: relative;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -128px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    animation: slide 16s infinite ease-in-out;
+}
+
+.slider img { 
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 60%;
+}
+
+@keyframes slide {
+    0%   { transform: translateX(0%); }
+    20%  { transform: translateX(0%); }
+
+    25%  { transform: translateX(-100%); }
+    45%  { transform: translateX(-100%); }
+
+    50%  { transform: translateX(-200%); }
+    70%  { transform: translateX(-200%); }
+
+    75%  { transform: translateX(-300%); }
+    95%  { transform: translateX(-300%); }
+
+    100% { transform: translateX(0%); } 
+}
+
+/*hero text on slider*/
+.hero-text {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    padding: 1%;
+    background-color: rgba(59, 59, 59, .5);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    color: #7b024d;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px #fe7ac1;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+}
+
+/*main body container*/
+.main-container {
+    padding: 4%;
+    background-image: url("images/pink graphic.jpg");
+}
+
+.main-body {
+    border-radius: 70px;
+    background: #3B3B3B;
+}
+
+/*events information*/
+.row-1 {
+    display: flex;
+    gap: 100px;
+    padding: 3%;
+    align-items: center;
+}
+
+.events-vid-container {
+    flex: 2;
+    padding: 2%;
+}
+
+.our-events-vid {
+    width: 100%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #333333;
+}
+
+.events-info-container {
+    flex: 1;
+    padding: 3%;
+    border-radius: 100px;
+    border-width: 5px;
+}
+
+.our-events-info {
+    font-size: 130%;
+    font-style: oblique;
+    text-align: center;
+    color: #7b024d;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: .7px #fe7ac1;
+}
+
+.our-events-info a {
+    font-size: 100%;
+    color: #fe7ac1;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: .7px #7b024d;
+}
+
+/*container to break up sections*/
+.img-row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.img-row img {
+    width: 100%;
+    opacity: 70%;
+}
+
+.quote-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1%;
+    background-color: rgba(123, 2, 77, 0.7);
+    border-radius: 30px;
+}
+
+.quote-container p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+}
+
+/*company information*/
+.row-2 {
+    display: flex;
+    gap: 100px;
+    padding: 3%;
+    align-items: center;
+}
+
+.company-info-container {
+    flex: 1;
+    padding: 3%;
+}
+
+.our-company-info {
+    font-size: 130%;
+    font-style: oblique;
+    text-align: center;
+    color: #7b024d;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: .7px #fe7ac1;
+}
+
+.our-company-info a {
+    font-size: 100%;
+    color: #fe7ac1;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: .7px #7b024d;
+}
+
+.company-vid-container {
+    flex: 2;
+    padding: 2%;
+}
+
+.our-company-vid {
+    width: 100%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #333333;
+}
+
+/* footer */
+.footer {
+    background-color: #3B3B3B;
+}
+
+.email-form-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+    align-items: center;
+    border-bottom: 1px dashed black;
+}
+
+.email-form-heading h1 {
+    font-size: 1.5rem;
+    color: #7b024d;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px #fe7ac1;
+}
+
+.email-form-heading p {
+    font-size: 1rem;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+}
+
+.input {
+    flex: 1;
+    height: 40px;
+    width: 300px;
+    font-style: oblique;
+    background-color: #7b024d;
+    border-style: solid;
+    border-color: black;
+    color: white;
+    padding: 2%;
+}
+
+.submit {
+    height: 40px;
+    background-color: #fe7ac1;
+    border-style: solid;
+    border-color: black;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+    transform: translateY(-2px); /* had to fix alignment issue due to font */
+}
+
+.submit:hover {
+    background-color: #7b024d;
+}
+
+.bottom-nav-container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+    align-items: center;
+    border-bottom: 1px dashed black;
+}
+
+.socials-nav i {
+    font-size: 2.25rem;
+    margin-right: 30px;
+}
+
+.socials-nav i {
+    color: white;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100vh;
+    list-style-type: square;
+}
+
+.bottom-nav li a {
+    text-decoration: none;
+    font-size: .8rem;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+}
+
+.copyright-info-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ----  About us page  ----*/
+.au-hero-text-container {
+    height: 410px;
+    background-image: url("images/mechanic.jpg");
+    margin-top: -128px;
+    background-size: cover;
+    background-position-y: 30%;
+}
+
+.main-body h1 {
+    font-size: 2rem;
+    color: #7b024d;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px #fe7ac1;
+    text-align: center;
+    padding-bottom: 3%;
+    padding-top: 8%;
+}
+
+.main-body h2 {
+    font-size: 1.5rem;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+    text-align: center;
+    padding-bottom: 8%;
+}
+
+.about-us-img-container {
+    flex: 1;
+    padding: 2%;
+}
+
+.about-us-img-container img {
+    width: 100%;
+}
+
+.about-us-info-container {
+    flex: 1;
+    padding: 1%;
+    background-color: rgba(254, 122, 193, .5);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.about-us-info {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.row-3 {
+    display: flex;
+    gap: 100px;
+    padding: 3%;
+    align-items: center;
+}
+
+/* View events */
+.ve-hero-text-container {
+    height: 410px;
+    background-image: url("images/classics car race.jpg");
+    margin-top: -128px;
+    background-size: cover;
+    background-position-y: 30%;
+}
+
+/* View events Table */
+.table-container {
+    padding: 5%;
+}
+
+.table-container table {
+    margin: auto;
+    padding: 3%;
+    background-color: rgba(254, 122, 193, .5);
+    border-radius: 30px;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.table-header th {
+    text-align: center;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+    border: 2px solid;
+    text-align: center;
+    padding: 14px;
+    font-size: 1.25rem;
+}
+
+.table-container td {
+    text-align: center;
+    padding: 14px;
+    font-size: 1.25rem;
+    border-bottom: 1px dashed;
+    text-transform: capitalize;
+}
+
+#event-date-style {
+    width: 15%; /* needed correct size for date to be readable */
+}
+
+/* Log in/Sign up page */
+.login-hero-background {
+    margin-top: -128px;
+    height: 170px;
+    background-color: #333333;
+}
+
+.form-container {
+    margin: 0 auto;
+    background-color:  rgba(254, 122, 193, .5);
+    padding: 5%;
+    border-radius: 30px;
+}
+
+.form-container form {
+    font-size: 1.75rem;
+    text-align: left;
+}
+
+.form-container label {
+    color: black;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.form-container input {
+    border: 2px solid black;
+    font-size: 1rem;
+    padding: 2%;
+    width: 350px;
+}
+
+.form-container input[type=submit] {
+    background-color: #fe7ac1;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+    font-size: 1.25rem;
+}
+
+.form-container input[type=submit]:hover {
+    background-color: #7b024d;
+}
+
+.row-2 hr {
+    flex: 1;
+    border: 2px dashed black;
+    border-radius: 5px;
+}
+
+/* for add events page */
+.hidden {
+    display: none;
+}
+
+/* Toast message pop ups */
+.toast-message {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    min-width: 250px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 9999;
+
+    opacity: 1;
+    animation: fadeOut 4s forwards;
+}
+
+/* fade out animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.toast-message.success {
+    background: #28a745;
+}
+
+.toast-message.error {
+    background: #dc3545;
+}
+
+/* Filter buttons */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 3%;
+    flex-wrap: wrap; 
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: #fe7ac1;
+    color: black;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-stroke: 1px white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: #7b024d;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.all-btn {
+    background-color: #3B3B3B;
+    color: white;
+    -webkit-text-stroke: 1px #fe7ac1;
+}
